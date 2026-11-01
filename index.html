@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gestão de Obra – Kilamba Salas Comerciais</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f1ec;--card:#fff;--tx:#1d1b18;--mu:#6b655c;--ac:#b4421f;--bd:#ddd6ca;--ok:#2f7d4f;--no:#b3261e}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171513;--card:#22201d;--tx:#f0ebe3;--mu:#a39b8e;--ac:#e0643a;--bd:#38342f;--ok:#5fc08a;--no:#f07a70}}
+:root[data-theme=dark]{--bg:#171513;--card:#22201d;--tx:#f0ebe3;--mu:#a39b8e;--ac:#e0643a;--bd:#38342f;--ok:#5fc08a;--no:#f07a70}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--card);border-bottom:1px solid var(--bd);padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+h1{font-size:17px;margin:0}h2{font-size:16px;margin:0 0 10px}small,.mu{color:var(--mu)}
+nav{display:flex;gap:4px;overflow-x:auto;padding:8px 12px;background:var(--card);border-bottom:1px solid var(--bd)}
+nav button{white-space:nowrap;border:0;background:none;color:var(--mu);padding:8px 12px;border-radius:8px;cursor:pointer;font:inherit}
+nav button.on{background:var(--ac);color:#fff}
+main{max-width:1000px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:14px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.k{font-size:22px;font-weight:700}.k.ok{color:var(--ok)}.k.no{color:var(--no)}
+button.b,label.b{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;font:inherit;display:inline-block}
+button.g{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px;width:100%}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--bd);vertical-align:top}th{font-size:12px;color:var(--mu);text-transform:uppercase}
+td.n,th.n{text-align:right;white-space:nowrap}
+.bar{height:12px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok)}
+.login{max-width:360px;margin:12vh auto;padding:0 16px}.login .card{padding:22px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.pw{position:relative}.pw button{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--ac);cursor:pointer;font:inherit}
+.ph{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+dialog{border:1px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);width:min(440px,92vw)}
+dialog label{display:block;margin:8px 0 2px;font-size:13px;color:var(--mu)}
+.err{color:var(--no);margin:8px 0 0}.hide{display:none!important}
+@media print{header button,nav,.noprint,.row button{display:none!important}body{background:#fff;color:#000}.card{border-color:#999;break-inside:avoid}:root{--card:#fff;--tx:#000;--mu:#444;--bd:#bbb}}
+:root{--bg:#f7f6f2;--card:#fff;--tx:#0d0d0c;--mu:#85817a;--ac:#e04e1b;--bd:#e6e3dc;--ok:#1f8a5b;--no:#c8321f;--ink:#0d0d0c}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b0b0a;--card:#141413;--tx:#f4f2ec;--mu:#8f8b82;--ac:#ff6a35;--bd:#262522;--ok:#4fd195;--no:#ff7a66;--ink:#f4f2ec}}
+:root[data-theme=dark]{--bg:#0b0b0a;--card:#141413;--tx:#f4f2ec;--mu:#8f8b82;--ac:#ff6a35;--bd:#262522;--ok:#4fd195;--no:#ff7a66;--ink:#f4f2ec}
+body{font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em;font-feature-settings:"tnum"}
+header{background:none;border:0;padding:22px 32px 10px;max-width:1160px;margin:0 auto}
+.brand{font-weight:700;letter-spacing:.28em;font-size:12px;text-transform:uppercase}.brand i{color:var(--ac);font-style:normal}
+.sv{font-size:12px;color:var(--mu)}.chip{font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--bd);border-radius:99px;padding:4px 10px}
+nav{background:none;border:0;max-width:1160px;margin:0 auto;padding:6px 26px;gap:2px}
+nav button{border-radius:99px;font-size:13px;font-weight:500;padding:8px 16px}nav button.on{background:var(--ink);color:var(--bg)}
+main{max-width:1160px;padding:8px 32px 64px}
+.hero{padding:44px 0 40px;border-bottom:1px solid var(--ink);margin-bottom:28px;display:flex;gap:32px;flex-wrap:wrap;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ac);font-weight:600;margin-bottom:14px}
+.hero h1{font:400 clamp(44px,8.5vw,104px)/.95 "Instrument Serif",Georgia,serif;letter-spacing:-.03em;margin:0;max-width:11ch}
+.hero p{color:var(--mu);margin:16px 0 0;max-width:46ch}
+.big{font:400 clamp(64px,11vw,140px)/.9 "Instrument Serif",Georgia,serif;letter-spacing:-.04em}.big small{font-size:.3em;color:var(--mu)}
+.card{border:1px solid var(--bd);border-radius:20px;padding:24px;box-shadow:none}
+h2{font:400 26px/1.1 "Instrument Serif",Georgia,serif;letter-spacing:-.01em;margin-bottom:14px}
+.k{font:400 34px/1 "Instrument Serif",Georgia,serif;margin-top:10px;letter-spacing:-.02em}
+.card>small:first-child,th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);font-weight:600}
+button.b,label.b{background:var(--ink);color:var(--bg);border-radius:99px;padding:10px 20px;font-weight:600;font-size:13px}
+button.g{border-radius:99px;font-size:12px}
+input,select,textarea{border-radius:12px;padding:11px 12px}
+.bar{height:4px;background:var(--bd)}.bar i{background:var(--ac)}
+td,th{padding:12px 8px}
+.login{max-width:420px}.login .card{padding:34px;border-radius:24px}.login h1{font:400 44px/1 "Instrument Serif",serif;margin-bottom:8px}
+.ro [data-add],.ro [data-ed],.ro [data-del],.ro label.b,.ro .upl{display:none!important}
+h1,h2,.hero h1,.big,.k,.login h1{font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;letter-spacing:-.035em}
+.hero h1{font-size:clamp(34px,6vw,72px);line-height:1.04;max-width:18ch}
+.big{font-size:clamp(56px,9vw,108px);line-height:.95}.big small{font-weight:500}
+h2{font-size:21px}.k{font-size:30px}.login h1{font-size:34px}
+.brand{letter-spacing:.14em}.eyebrow{letter-spacing:.12em}.chip{letter-spacing:.08em}
+@media(max-width:600px){header,main{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<dialog id="dlg"><form method="dialog" id="frm"></form></dialog>
+<script>
+(function(){
+var DEF_PW="Kilamba2026",EMAIL="exclusivarquitetura@gmail.com",CLI="paula.santos",DEF_PWC="Paula2026";
+var $=function(s){return document.querySelector(s)};
+var fmt=function(n){return (Math.round(n)||0).toLocaleString("pt-PT").replace(/\u00a0/g," ")+" Kz"};
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var fd=function(d){return d?d.split("-").reverse().join("/"):""};
+var uid=function(){return Math.random().toString(36).slice(2,9)};
+function L(d,t,desc,cat,v,o){return{id:uid(),d:d,t:t,desc:desc,cat:cat,v:v,o:o||""}}
+var S={co:"Exclusiv Arquitetura",owner:"Paula dos Santos",client:"Paula dos Santos",title:"Salas Comerciais – Kilamba, Luanda",contract:"2026-09-18",pw:null,
+area:[["Loja 01 – térreo",76],["Loja 01 – escritório 1.º andar",67.95],["Loja 02 – térreo",74],["Loja 02 – escritório 1.º andar",66.78]],
+ledger:[
+L("2026-10-19","E","Aporte recebido em espécie – Paula dos Santos","Aporte",1400000),
+L("2026-10-19","S","Fatura 002 – contraplacado 20, barrote 7x7 50, ripas 5x5 12 atados, ferro Ø16 2 atados, prego 6 kg","Material",1059000,"Catarina Muhongo"),
+L("2026-10-19","S","Fatura 003 – transporte e carga/descarga","Transporte",75000,"Catarina Muhongo"),
+L("2026-10-19","S","Táxi Yango – deslocação do Teófilo","Deslocação",16000),
+L("2026-10-23","S","1 kg de arame","Material",30000,"Enviado ao mestre Carson – Express 924 644 071"),
+L("2026-10-27","S","1 atado de ferro","Material",75000,"Enviado ao mestre Carson – Express 924 644 071"),
+L("2026-10-27","S","Transporte","Transporte",10000,"Enviado ao mestre Carson"),
+L("2026-10-30","E","Aporte Lisandro (depositado 29.10, recebido 30.10)","Aporte",500000),
+L("2026-10-31","S","Fatura 048 – 15 contraplacados","Material",270000,"Catarina Muhongo"),
+L("2026-10-31","S","Fatura 048 – 3 atados de ferro","Material",228000,"Catarina Muhongo"),
+L("2026-10-31","S","Fatura 048 – 1 rolo de arame","Material",30000,"Catarina Muhongo"),
+L("2026-10-31","S","Fatura 048 – transporte carrinha","Transporte",30000,"Catarina Muhongo"),
+L("2026-10-31","S","Fatura 048 – carga e descarga","Transporte",15000,"Catarina Muhongo"),
+L("2026-10-31","S","Deslocação do Teófilo","Deslocação",12200)],
+etapas:[["Projeto de arquitetura e estrutura",100,5],["Limpeza e implantação",100,5],["Fundações",100,15],["Pilares do térreo",100,10],["Alvenaria do térreo",85,15],["Cofragem das vigas do 1.º pavimento",80,8],["Armação das vigas do 1.º pavimento",60,7],["Betonagem da laje (de uma só vez)",0,10],["Hidráulica e elétrica na laje",0,5],["Pilares e alvenaria do 1.º andar",0,10],["Cobertura",0,5],["Acabamentos e entrega",0,5]].map(function(e){return{id:uid(),n:e[0],p:e[1],w:e[2]}}),
+hist:[["Ferro – 5 atados de 12 + 7 atados de 6 (12 × 70.000)","Material",840000],["Transporte do ferro","Material",20000],["300 tijolos (375 un. c/ transporte)","Material",112500],["Areia (1 pá 38.000), brita (1 pá 45.000), transporte 20.000","Material",103000],["15 sacos de cimento (6.800) + transporte 8.000","Material",110000],["3 contraplacados (17.000)","Material",51000],["1 rolo de arame","Material",30000],["Mão de obra – 40% inicial (limpeza, implantação, dormitório, fogão, gás)","Mão de obra",2400000],["Mão de obra – saldo do último repasse de 3.000.000","Mão de obra",1733500],["Mão de obra – avanço após revitalização","Mão de obra",600000],["Mão de obra – avanço na paragem","Mão de obra",250000]].map(function(h){return{id:uid(),desc:h[0],cat:h[1],v:h[2]}}),
+photos:[]};
+var role="",stamp="",tab="pain",user=false,db=null,assets=null,showPw=false;
+var TABS=[["pain","Painel"],["caixa","Caixa"],["av","Avanço físico"],["foto","Fotos"],["hist","Pré-gestão"],["rel","Relatório"],["cfg","Config."]];
+function load(){try{var j=localStorage.getItem("kil_obra");if(j)S=Object.assign(S,JSON.parse(j))}catch(e){}}
+function save(){if(role!="admin")return;S.ts=Date.now();stamp=new Date().toLocaleTimeString("pt-PT",{hour:"2-digit",minute:"2-digit"});var sv=$(".sv");if(sv)sv.textContent="Salvo automaticamente às "+stamp;var j=JSON.stringify(S);try{localStorage.setItem("kil_obra",j)}catch(e){}
+if(db)db.doc("obra/estado").set({json:j}).catch(function(){})}
+function totals(){var e=0,s=0,c={};S.ledger.forEach(function(x){if(x.t=="E")e+=+x.v;else{s+=+x.v;c[x.cat]=(c[x.cat]||0)+ +x.v}});return{e:e,s:s,saldo:e-s,c:c}}
+function prog(){var w=0,p=0;S.etapas.forEach(function(x){w+=+x.w;p+=x.p*x.w});return w?p/w:0}
+function hashPw(p){var b=new TextEncoder().encode("kil:"+p);return crypto.subtle.digest("SHA-256",b).then(function(h){return Array.from(new Uint8Array(h)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")})}
+function bar(p){return '<div class="bar"><i style="width:'+Math.min(100,p)+'%"></i></div>'}
+function head(){return '<header><div class="brand">'+esc(S.co)+' <i>/</i> Obra</div><div class="row noprint" style="margin:0"><span class="sv">'+(role=="admin"?(stamp?"Salvo automaticamente às "+stamp:"Salvamento automático ativo"):"Atualização em tempo real")+'</span><span class="chip">'+(role=="admin"?"Administrador":"Cliente")+'</span><button class="g" id="out">Sair</button></div></header>'}
+function hero(){var p=prog();return '<section class="hero"><div><div class="eyebrow">Gestão e acompanhamento de obra</div><h1>'+esc(S.title)+'</h1><p>Proprietária '+esc(S.owner)+'. Projeto, gestão e acompanhamento por '+esc(S.co)+'.</p></div><div><div class="eyebrow">Avanço físico</div><div class="big">'+Math.round(p)+'<small>%</small></div></div></section>'}
+function rLogin(){$("#app").innerHTML='<div class="login"><div class="card"><h1>Gestão de Obra</h1><p class="mu">Acesso restrito – '+esc(S.co)+'</p><label>Email ou usuário</label><input id="em" type="text" autocomplete="username"><label style="display:block;margin-top:10px">Senha</label><div class="pw"><input id="pw" type="'+(showPw?"text":"password")+'" autocomplete="current-password"><button type="button" id="tg">'+(showPw?"Ocultar":"Ver")+'</button></div><p class="err" id="er"></p><button class="b" id="go" style="width:100%;margin-top:10px">Entrar</button></div></div>';
+$("#tg").onclick=function(){showPw=!showPw;var v=$("#pw").value,m=$("#em").value;rLogin();$("#pw").value=v;$("#em").value=m};
+var go=function(){var u=$("#em").value.trim().toLowerCase();hashPw($("#pw").value).then(function(h){return Promise.all([h,hashPw(S.pw||DEF_PW),hashPw(S.pwc||DEF_PWC)])}).then(function(a){var r=u==EMAIL&&a[0]==a[1]?"admin":u==CLI&&a[0]==a[2]?"cliente":"";if(r){user=true;role=r;sessionStorage.setItem("kil_ok",r);init()}else $("#er").textContent="Usuário ou senha incorretos."})};
+$("#go").onclick=go;$("#pw").onkeydown=function(e){if(e.key=="Enter")go()}}
+function rPain(){var t=totals(),p=prog(),tot=S.area.reduce(function(a,x){return a+x[1]},0),sr=Object.keys(t.c).map(function(k){return '<tr><td>'+esc(k)+'</td><td class="n">'+fmt(t.c[k])+'</td></tr>'}).join("");
+return hero()+'<div class="grid"><div class="card"><small>Avanço físico</small><div class="k">'+p.toFixed(1)+'%</div>'+bar(p)+'</div><div class="card"><small>Total recebido (aportes)</small><div class="k">'+fmt(t.e)+'</div></div><div class="card"><small>Total gasto</small><div class="k no">'+fmt(t.s)+'</div></div><div class="card"><small>Saldo em caixa</small><div class="k '+(t.saldo>=0?"ok":"no")+'">'+fmt(t.saldo)+'</div></div></div>'+
+'<div class="card"><h2>Fase atual</h2><p>Finalização da preparação das vigas do 1.º pavimento para betonagem da laje de uma só vez. Próxima etapa, em simultâneo: preparação hidráulica e elétrica na laje.</p><p class="mu">Contrato de projeto e acompanhamento assinado em '+fd(S.contract)+'.</p></div>'+
+'<div class="card"><h2>Gastos por categoria</h2><div class="tw"><table><tbody>'+sr+'</tbody></table></div></div>'+
+'<div class="card"><h2>Áreas do projeto</h2><div class="tw"><table><tbody>'+S.area.map(function(a){return '<tr><td>'+a[0]+'</td><td class="n">'+a[1].toFixed(2)+' m²</td></tr>'}).join("")+'<tr><th>Total</th><th class="n">'+tot.toFixed(2)+' m²</th></tr></tbody></table></div></div>'}
+function rCaixa(){var t=totals(),run=0,rows=S.ledger.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0}).map(function(x){run+=x.t=="E"?+x.v:-x.v;return '<tr><td>'+fd(x.d)+'</td><td>'+esc(x.desc)+(x.o?'<br><small>'+esc(x.o)+'</small>':'')+'</td><td>'+esc(x.cat)+'</td><td class="n" style="color:var(--'+(x.t=="E"?"ok":"no")+')">'+(x.t=="E"?"+":"−")+fmt(x.v)+'</td><td class="n">'+fmt(run)+'</td><td class="noprint n"><button class="g" data-ed="ledger:'+x.id+'">Editar</button></td></tr>'}).join("");
+return '<div class="card"><div class="row"><h2 style="margin:0;flex:1">Caixa da obra – receitas e despesas</h2><button class="b noprint" data-add="ledger">+ Lançamento</button></div><p>Entradas <b>'+fmt(t.e)+'</b> · Saídas <b>'+fmt(t.s)+'</b> · Saldo <b>'+fmt(t.saldo)+'</b></p><div class="tw"><table><thead><tr><th>Data</th><th>Descrição</th><th>Categoria</th><th class="n">Valor</th><th class="n">Saldo</th><th class="noprint"></th></tr></thead><tbody>'+rows+'</tbody></table></div></div>'}
+function rAv(){return '<div class="card"><div class="row"><h2 style="margin:0;flex:1">Avanço físico – '+prog().toFixed(1)+'%</h2><button class="b noprint" data-add="etapas">+ Etapa</button></div>'+bar(prog())+'<p class="mu">Percentagens e pesos são estimativas iniciais – ajuste conforme a medição em obra.</p><div class="tw"><table><thead><tr><th>Etapa</th><th class="n">Peso</th><th style="width:30%">Execução</th><th class="n">%</th><th class="noprint"></th></tr></thead><tbody>'+S.etapas.map(function(e){return '<tr><td>'+esc(e.n)+'</td><td class="n">'+e.w+'</td><td>'+bar(e.p)+'</td><td class="n">'+e.p+'%</td><td class="noprint n"><button class="g" data-ed="etapas:'+e.id+'">Editar</button></td></tr>'}).join("")+'</tbody></table></div></div>'}
+function rFoto(){var g={};S.photos.slice().sort(function(a,b){return a.d<b.d?1:-1}).forEach(function(p){(g[p.d]=g[p.d]||[]).push(p)});
+return '<div class="card"><div class="row"><h2 style="margin:0;flex:1">Registo fotográfico semanal</h2>'+(assets?'<label class="b noprint">+ Adicionar fotos<input id="up" type="file" accept="image/*" multiple class="hide"></label>':'')+'</div>'+(assets?'':'<p class="mu">Envio de fotos indisponível nesta sessão (requer permissão de editor).</p>')+
+'<div class="row noprint upl"><small>Data das fotos</small><input id="pd" type="date" style="width:auto" value="'+new Date().toISOString().slice(0,10)+'"><input id="pc" placeholder="Legenda (opcional)" style="flex:1;min-width:160px"></div>'+(S.photos.length?Object.keys(g).sort().reverse().map(function(d){return '<h2 style="margin-top:14px">'+fd(d)+'</h2><div class="ph">'+g[d].map(function(p){return '<figure style="margin:0"><img src="'+esc(p.url)+'" alt="">'+'<small>'+esc(p.c)+'</small> <button class="g noprint" data-del="photos:'+p.id+'">Remover</button></figure>'}).join("")+'</div>'}).join(""):'<p class="mu">Ainda sem fotos. Carregue as fotos do dia 30/10 e depois semanalmente.</p>')+'</div>'}
+function rHist(){var m=0,o=0;S.hist.forEach(function(h){if(h.cat=="Material")m+=+h.v;else o+=+h.v});
+return '<div class="card"><div class="row"><h2 style="margin:0;flex:1">Prestação de contas do empreiteiro (antes da nossa gestão)</h2><button class="b noprint" data-add="hist">+ Item</button></div><p class="mu">Valores informados pelo empreiteiro; não entram no caixa atual.</p><p>Materiais <b>'+fmt(m)+'</b> · Mão de obra <b>'+fmt(o)+'</b> · Total <b>'+fmt(m+o)+'</b></p><div class="tw"><table><thead><tr><th>Descrição</th><th>Tipo</th><th class="n">Valor</th><th class="noprint"></th></tr></thead><tbody>'+S.hist.map(function(h){return '<tr><td>'+esc(h.desc)+'</td><td>'+esc(h.cat)+'</td><td class="n">'+fmt(h.v)+'</td><td class="noprint n"><button class="g" data-ed="hist:'+h.id+'">Editar</button></td></tr>'}).join("")+'</tbody></table></div><p class="mu">Plano financeiro acordado: 1.º pagamento 4.000.000 Kz e 2.º pagamento 2.000.000 Kz (40% de mão de obra = 2.400.000 Kz; restante 3.600.000 Kz para fundações, vigas e pilares). Repasses posteriores: 2.000.000 Kz para revitalizar a obra e 3.000.000 Kz mais recente.</p></div>'}
+function rRel(){return '<div class="card noprint"><div class="row"><h2 style="margin:0;flex:1">Relatório de obra</h2><button class="b" id="pr">Imprimir / Guardar PDF</button></div><p class="mu">Inclui resumo financeiro, avanço físico e fotos mais recentes. Data de emissão: '+fd(new Date().toISOString().slice(0,10))+'.</p></div><div class="card"><h1>Relatório de obra – '+esc(S.title)+'</h1><p>Emitido por <b>'+esc(S.co)+'</b> · Proprietária: '+esc(S.owner)+' · '+fd(new Date().toISOString().slice(0,10))+'</p></div>'+rPain()+rCaixa()+rAv()+(S.photos.length?rFoto():"")}
+function rCfg(){return '<div class="card"><h2>Dados da obra</h2><label>Empresa responsável pela gestão</label><input id="c1" value="'+esc(S.co)+'"><label style="display:block;margin-top:8px">Proprietária</label><input id="c2" value="'+esc(S.owner)+'"><label style="display:block;margin-top:8px">Título</label><input id="c3" value="'+esc(S.title)+'"><label style="display:block;margin-top:8px">Data do contrato</label><input id="c4" type="date" value="'+S.contract+'"><p><button class="b" id="cs">Guardar</button></p></div><div class="card"><h2>Alterar senha</h2><div class="pw"><input id="np" type="password" placeholder="Nova senha (mín. 8 caracteres)"><button type="button" id="tn">Ver</button></div><p><button class="b" id="ps">Atualizar senha</button> <span id="pm" class="mu"></span></p></div><div class="card"><h2>Acesso da cliente (somente leitura)</h2><p class="mu">Usuário: <b>'+CLI+'</b>. A cliente vê tudo, mas não edita.</p><input id="npc" type="text" placeholder="Nova senha da cliente (mín. 8 caracteres)"><p><button class="b" id="psc">Atualizar senha da cliente</button> <span id="pm2" class="mu"></span></p></div><div class="card"><h2>Cópia de segurança</h2><p class="mu">Exporte os dados para guardar no GitHub (pasta data/obra.json).</p><button class="b" id="ex">Exportar obra.json</button></div>'}
+var FORMS={ledger:[["d","Data","date"],["t","Tipo",[["E","Entrada"],["S","Saída"]]],["desc","Descrição","text"],["cat","Categoria",["Aporte","Material","Transporte","Deslocação","Mão de obra","Outros"]],["v","Valor (Kz)","number"],["o","Observações","text"]],
+etapas:[["n","Etapa","text"],["w","Peso","number"],["p","Execução (%)","number"]],hist:[["desc","Descrição","text"],["cat","Tipo",["Material","Mão de obra"]],["v","Valor (Kz)","number"]]};
+function openForm(k,id){var f=FORMS[k],it=id?S[k].find(function(x){return x.id==id}):{d:new Date().toISOString().slice(0,10),t:"S",cat:k=="hist"?"Material":"Material",p:0,w:5};
+$("#frm").innerHTML='<h2>'+(id?"Editar":"Novo")+'</h2>'+f.map(function(x){var v=it[x[0]]==null?"":it[x[0]],inp;if(typeof x[2]=="string")inp='<input name="'+x[0]+'" type="'+x[2]+'" value="'+esc(v)+'">';else inp='<select name="'+x[0]+'">'+x[2].map(function(o){var a=Array.isArray(o)?o:[o,o];return '<option value="'+a[0]+'"'+(a[0]==v?" selected":"")+'>'+a[1]+'</option>'}).join("")+'</select>';return '<label>'+x[1]+'</label>'+inp}).join("")+'<div class="row" style="margin-top:14px"><button class="b" value="ok">Guardar</button><button class="g" value="x" formnovalidate>Cancelar</button>'+(id?'<button class="g" value="del" style="margin-left:auto;color:var(--no)">Excluir</button>':'')+'</div>';
+$("#dlg").onclose=function(){var r=$("#dlg").returnValue;if(r=="ok"){var o=id?it:{id:uid()};f.forEach(function(x){var v=$("#frm").elements[x[0]].value;o[x[0]]=x[2]=="number"?+v:v});if(k=="etapas")o.p=Math.max(0,Math.min(100,o.p));if(!id)S[k].push(o);save();draw()}else if(r=="del"){S[k]=S[k].filter(function(x){return x.id!=id});save();draw()}$("#dlg").returnValue=""};
+$("#dlg").showModal()}
+function draw(){if(S.co=="Exclusiva Arquitetura")S.co="Exclusiv Arquitetura";if(!user)return rLogin();if(role!="admin"&&tab=="cfg")tab="pain";var v={pain:rPain,caixa:rCaixa,av:rAv,foto:rFoto,hist:rHist,rel:rRel,cfg:rCfg}[tab]();
+$("#app").innerHTML=head()+'<nav>'+TABS.filter(function(t){return role=="admin"||t[0]!="cfg"}).map(function(t){return '<button data-t="'+t[0]+'" class="'+(t[0]==tab?"on":"")+'">'+t[1]+'</button>'}).join("")+'</nav><main>'+v+'</main>';
+document.body.className=role=="cliente"?"ro":"";$("#out").onclick=function(){user=false;role="";document.body.className="";sessionStorage.removeItem("kil_ok");draw()};
+document.querySelectorAll("[data-t]").forEach(function(b){b.onclick=function(){tab=b.dataset.t;draw()}});
+document.querySelectorAll("[data-add]").forEach(function(b){b.onclick=function(){openForm(b.dataset.add)}});
+document.querySelectorAll("[data-ed]").forEach(function(b){b.onclick=function(){var a=b.dataset.ed.split(":");openForm(a[0],a[1])}});
+document.querySelectorAll("[data-del]").forEach(function(b){b.onclick=function(){var a=b.dataset.del.split(":");if(!b.dataset.ok){b.dataset.ok="1";b.textContent="Confirmar remoção";b.style.color="var(--no)";return}S.photos=S.photos.filter(function(x){return x.id!=a[1]});save();draw()}});
+var pr=$("#pr");if(pr)pr.onclick=function(){try{window.print()}catch(e){alert("Use o menu do navegador para imprimir.")}};
+var up=$("#up");if(up)up.onchange=function(){var d=$("#pd").value,c=$("#pc").value,fl=Array.from(up.files);up.disabled=true;fl.reduce(function(p,f){return p.then(function(){return assets.upload(f).then(function(r){S.photos.push({id:uid(),d:d,c:c,url:r.url})})})},Promise.resolve()).then(function(){save();draw()}).catch(function(){alert("Não foi possível enviar as fotos.");draw()})};
+if($("#cs"))$("#cs").onclick=function(){S.co=$("#c1").value;S.owner=$("#c2").value;S.title=$("#c3").value;S.contract=$("#c4").value;save();draw()};
+if($("#tn"))$("#tn").onclick=function(){var i=$("#np");i.type=i.type=="password"?"text":"password";$("#tn").textContent=i.type=="password"?"Ver":"Ocultar"};
+if($("#ps"))$("#ps").onclick=function(){var p=$("#np").value;if(p.length<8){$("#pm").textContent="Mínimo 8 caracteres.";return}hashPw(p).then(function(h){S.pw=h;save();$("#pm").textContent="Senha atualizada."})};if($("#psc"))$("#psc").onclick=function(){var p=$("#npc").value;if(p.length<8){$("#pm2").textContent="Mínimo 8 caracteres.";return}hashPw(p).then(function(h){S.pwc=h;save();$("#pm2").textContent="Senha da cliente atualizada."})};if($("#ex"))$("#ex").onclick=function(){var d=JSON.stringify(S,null,1);(window.claude&&claude.use?claude.use("downloads"):Promise.resolve(null)).then(function(dl){if(dl)return dl.save({filename:"obra.json",data:d});var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([d],{type:"application/json"}));a.download="obra.json";a.click()}).catch(function(){})}}
+function init(){load();draw();
+if(window.claude&&claude.use){Promise.all([claude.use("db"),claude.use("assets")]).then(function(r){assets=r[1];db=r[0];if(!db){draw();return}
+var t=setTimeout(function(){},10000);db.doc("obra/estado").get().then(function(s){clearTimeout(t);if(s.exists){try{S=Object.assign(S,JSON.parse(s.data().json));localStorage.setItem("kil_obra",s.data().json)}catch(e){}}else save();draw();try{db.doc("obra/estado").onSnapshot(function(n){if(!n.exists||$("#dlg").open||role=="admin")return;var j=n.data().json;if(j==JSON.stringify(S))return;try{S=Object.assign(S,JSON.parse(j));draw()}catch(e){}},function(){})}catch(e){}}).catch(function(){draw()})}).catch(function(){})}
+else fileSync()}
+function fileSync(){fetch("data/obra.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(o){if(o&&(o.ts||0)>(S.ts||0)){S=Object.assign(S,o);try{localStorage.setItem("kil_obra",JSON.stringify(S))}catch(e){}draw()}}).catch(function(){})}
+load();
+var ss=sessionStorage.getItem("kil_ok");if(ss=="admin"||ss=="cliente"){user=true;role=ss;init()}else{draw();
+if(window.claude&&claude.use)claude.use("db").then(function(d){if(!d)return;d.doc("obra/estado").get().then(function(s){if(s.exists){try{var o=JSON.parse(s.data().json);S.pw=o.pw;S.pwc=o.pwc;S.co=o.co||S.co}catch(e){}}})}).catch(function(){})}
+})();
+</script>
+</body>
+</html>
